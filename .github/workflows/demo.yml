@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-run-name: - pip install -r requirements_dev.txt
+
 on:
 
   push:
@@ -21,3 +21,4 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
 
       - run: flake8 --max-line-length=120 --ignore=D101,D104,D212,D200,E203,W293,D412,W503 mkdocs_with_confluence/
+      - run: - pip install -r requirements_dev.txt
